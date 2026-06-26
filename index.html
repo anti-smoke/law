@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控烟法律法规查询</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🏣 控烟法律法规查询系统</h1>
+        <p class="subtitle">全国各地控烟相关法律法规一网打尽</p>
+    </header>
+
+    <main id="app">
+        <!-- Home Page -->
+        <section id="home-page" class="page active">
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索行政区名称（如：深圳市、北京市）..." autocomplete="off">
+                    <button id="search-btn">搜索</button>
+                </div>
+                <div id="search-results" class="search-results"></div>
+            </div>
+
+            <div class="regions-section">
+                <h2>📍 行政区划</h2>
+                <div class="region-tabs">
+                    <button class="tab-btn active" data-level="省级">省级</button>
+                    <button class="tab-btn" data-level="地级">地级</button>
+                    <button class="tab-btn" data-level="县级">县级</button>
+                </div>
+                <div id="regions-list" class="regions-list"></div>
+            </div>
+        </section>
+
+        <!-- Region Detail Page -->
+        <section id="detail-page" class="page">
+            <button class="back-btn" id="back-btn">← 返回首页</button>
+            <div id="region-header"></div>
+            <div id="region-content"></div>
+        </section>
+
+        <!-- Other Regulations Page -->
+        <section id="other-page" class="page">
+            <button class="back-btn" id="back-other-btn">← 返回</button>
+            <h2>📜 其他全国性控烟相关法律法规</h2>
+            <div id="other-regulations"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>数据来源：禁烟条例.xlsx | <button class="link-btn" id="refresh-btn">刷新数据</button></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
