@@ -328,6 +328,13 @@ main {
     background: #dd6b20;
 }
 
+/* Children Links */
+.children-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+
 /* Other Regulations Page */
 #other-page h2 {
     background: white;
